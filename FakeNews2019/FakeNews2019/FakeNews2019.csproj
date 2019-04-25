@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9771E51C-E52E-435D-9429-E6FBC67ABF17}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FakeNews2019</RootNamespace>
+    <AssemblyName>FakeNews2019</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v18.2.Web.WebForms, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v18.2.Web, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Map.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.Resources.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v18.2.Presets, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v18.2.Win, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraMap.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FakeNews2019, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\FakeNews2019.dll</HintPath>
+    </Reference>
+    <Reference Include="FuzzyLogicController, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\FuzzyLogicController.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="StringTokenizer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\StringTokenizer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\BlogPosts.xml" />
+    <Content Include="App_Data\FNDash.mdb" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Components\FNBook000.jpg" />
+    <Content Include="Content\Images\Components\FNBook001.jpg" />
+    <Content Include="Content\Images\Components\FNBook002.jpg" />
+    <Content Include="Content\Images\Components\FNBook003.jpg" />
+    <Content Include="Content\Images\Components\FNBook004.jpg" />
+    <Content Include="Content\Images\Components\FNBook005.jpg" />
+    <Content Include="Content\Images\Customers\LaithPic.png" />
+    <Content Include="Content\Images\Customers\OmarPic.png" />
+    <Content Include="Content\Images\Initiatives\akeed.jordan.jpg" />
+    <Content Include="Content\Images\Initiatives\check.pal.png" />
+    <Content Include="Content\Images\Initiatives\DaBegad.jpg" />
+    <Content Include="Content\Images\Initiatives\Fadeh1.jpg" />
+    <Content Include="Content\Images\Initiatives\Falsoo.jpg" />
+    <Content Include="Content\Images\Initiatives\fatabyyano.jpg" />
+    <Content Include="Content\Images\Initiatives\LierLogo arb.png" />
+    <Content Include="Content\Images\Initiatives\norumors.jpg" />
+    <Content Include="Content\Images\Initiatives\sahahkhabark.jpg" />
+    <Content Include="Content\Images\Initiatives\Tech4Peace.png" />
+    <Content Include="Content\Images\LierLogo arb.png" />
+    <Content Include="Content\Images\Blog\image0.png" />
+    <Content Include="Content\Images\Blog\image1.png" />
+    <Content Include="Content\Images\Blog\image2.png" />
+    <Content Include="Content\Images\Blog\image3.png" />
+    <Content Include="Content\Images\Customers\GaryRubio.jpg" />
+    <Content Include="Content\Images\Customers\HeidiLopez.jpg" />
+    <Content Include="Content\Images\Customers\NathanBryant.jpg" />
+    <Content Include="Content\Images\Customers\RafaelRaje.jpg" />
+    <Content Include="Content\Images\MyBook\Slide1.JPG" />
+    <Content Include="Content\Images\MyBook\Slide10.JPG" />
+    <Content Include="Content\Images\MyBook\Slide11.JPG" />
+    <Content Include="Content\Images\MyBook\Slide12.JPG" />
+    <Content Include="Content\Images\MyBook\Slide13.JPG" />
+    <Content Include="Content\Images\MyBook\Slide14.JPG" />
+    <Content Include="Content\Images\MyBook\Slide15.JPG" />
+    <Content Include="Content\Images\MyBook\Slide16.JPG" />
+    <Content Include="Content\Images\MyBook\Slide17.JPG" />
+    <Content Include="Content\Images\MyBook\Slide18.JPG" />
+    <Content Include="Content\Images\MyBook\Slide19.JPG" />
+    <Content Include="Content\Images\MyBook\Slide2.JPG" />
+    <Content Include="Content\Images\MyBook\Slide20.JPG" />
+    <Content Include="Content\Images\MyBook\Slide21.JPG" />
+    <Content Include="Content\Images\MyBook\Slide22.JPG" />
+    <Content Include="Content\Images\MyBook\Slide23.JPG" />
+    <Content Include="Content\Images\MyBook\Slide24.JPG" />
+    <Content Include="Content\Images\MyBook\Slide25.JPG" />
+    <Content Include="Content\Images\MyBook\Slide26.JPG" />
+    <Content Include="Content\Images\MyBook\Slide27.JPG" />
+    <Content Include="Content\Images\MyBook\Slide28.JPG" />
+    <Content Include="Content\Images\MyBook\Slide29.JPG" />
+    <Content Include="Content\Images\MyBook\Slide3.JPG" />
+    <Content Include="Content\Images\MyBook\Slide30.JPG" />
+    <Content Include="Content\Images\MyBook\Slide31.JPG" />
+    <Content Include="Content\Images\MyBook\Slide32.JPG" />
+    <Content Include="Content\Images\MyBook\Slide33.JPG" />
+    <Content Include="Content\Images\MyBook\Slide34.JPG" />
+    <Content Include="Content\Images\MyBook\Slide35.JPG" />
+    <Content Include="Content\Images\MyBook\Slide36.JPG" />
+    <Content Include="Content\Images\MyBook\Slide37.JPG" />
+    <Content Include="Content\Images\MyBook\Slide38.JPG" />
+    <Content Include="Content\Images\MyBook\Slide39.JPG" />
+    <Content Include="Content\Images\MyBook\Slide4.JPG" />
+    <Content Include="Content\Images\MyBook\Slide40.JPG" />
+    <Content Include="Content\Images\MyBook\Slide41.JPG" />
+    <Content Include="Content\Images\MyBook\Slide42.JPG" />
+    <Content Include="Content\Images\MyBook\Slide43.JPG" />
+    <Content Include="Content\Images\MyBook\Slide44.JPG" />
+    <Content Include="Content\Images\MyBook\Slide45.JPG" />
+    <Content Include="Content\Images\MyBook\Slide46.JPG" />
+    <Content Include="Content\Images\MyBook\Slide47.JPG" />
+    <Content Include="Content\Images\MyBook\Slide48.JPG" />
+    <Content Include="Content\Images\MyBook\Slide49.JPG" />
+    <Content Include="Content\Images\MyBook\Slide5.JPG" />
+    <Content Include="Content\Images\MyBook\Slide50.JPG" />
+    <Content Include="Content\Images\MyBook\Slide51.JPG" />
+    <Content Include="Content\Images\MyBook\Slide52.JPG" />
+    <Content Include="Content\Images\MyBook\Slide53.JPG" />
+    <Content Include="Content\Images\MyBook\Slide54.JPG" />
+    <Content Include="Content\Images\MyBook\Slide55.JPG" />
+    <Content Include="Content\Images\MyBook\Slide56.JPG" />
+    <Content Include="Content\Images\MyBook\Slide57.JPG" />
+    <Content Include="Content\Images\MyBook\Slide58.JPG" />
+    <Content Include="Content\Images\MyBook\Slide59.JPG" />
+    <Content Include="Content\Images\MyBook\Slide6.JPG" />
+    <Content Include="Content\Images\MyBook\Slide60.JPG" />
+    <Content Include="Content\Images\MyBook\Slide61.JPG" />
+    <Content Include="Content\Images\MyBook\Slide62.JPG" />
+    <Content Include="Content\Images\MyBook\Slide63.JPG" />
+    <Content Include="Content\Images\MyBook\Slide64.JPG" />
+    <Content Include="Content\Images\MyBook\Slide65.JPG" />
+    <Content Include="Content\Images\MyBook\Slide66.JPG" />
+    <Content Include="Content\Images\MyBook\Slide67.JPG" />
+    <Content Include="Content\Images\MyBook\Slide68.JPG" />
+    <Content Include="Content\Images\MyBook\Slide69.JPG" />
+    <Content Include="Content\Images\MyBook\Slide7.JPG" />
+    <Content Include="Content\Images\MyBook\Slide70.JPG" />
+    <Content Include="Content\Images\MyBook\Slide71.JPG" />
+    <Content Include="Content\Images\MyBook\Slide72.JPG" />
+    <Content Include="Content\Images\MyBook\Slide73.JPG" />
+    <Content Include="Content\Images\MyBook\Slide74.JPG" />
+    <Content Include="Content\Images\MyBook\Slide75.JPG" />
+    <Content Include="Content\Images\MyBook\Slide76.JPG" />
+    <Content Include="Content\Images\MyBook\Slide77.JPG" />
+    <Content Include="Content\Images\MyBook\Slide78.JPG" />
+    <Content Include="Content\Images\MyBook\Slide79.JPG" />
+    <Content Include="Content\Images\MyBook\Slide8.JPG" />
+    <Content Include="Content\Images\MyBook\Slide80.JPG" />
+    <Content Include="Content\Images\MyBook\Slide81.JPG" />
+    <Content Include="Content\Images\MyBook\Slide82.JPG" />
+    <Content Include="Content\Images\MyBook\Slide83.JPG" />
+    <Content Include="Content\Images\MyBook\Slide84.JPG" />
+    <Content Include="Content\Images\MyBook\Slide85.JPG" />
+    <Content Include="Content\Images\MyBook\Slide86.JPG" />
+    <Content Include="Content\Images\MyBook\Slide87.JPG" />
+    <Content Include="Content\Images\MyBook\Slide88.JPG" />
+    <Content Include="Content\Images\MyBook\Slide9.JPG" />
+    <Content Include="Content\site.css" />
+    <Content Include="DB\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Pages\FNDesignerPage.aspx" />
+    <Content Include="Pages\DesignerPage.aspx" />
+    <Content Include="Fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Pages\BlogPost.aspx" />
+    <Content Include="Pages\BlogTimeline.aspx" />
+    <Content Include="Pages\Contacts.aspx" />
+    <Content Include="Pages\FuzzyPage.aspx" />
+    <Content Include="Pages\Home.aspx" />
+    <Content Include="Pages\InitativesPage.aspx" />
+    <Content Include="Pages\MediaPage.aspx" />
+    <Content Include="Pages\MYBookPage.aspx" />
+    <Content Include="Pages\Search.aspx" />
+    <Content Include="Pages\FNViewPage.aspx" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\site.js" />
+    <Content Include="StringTokenizer.dll" />
+    <Content Include="UserControls\AddCommentForm.ascx" />
+    <Content Include="UserControls\BlogNavigation.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Layout.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pages\ViewPage.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="FakeNewsDashBoard.Master" />
+    <EntityDeploy Include="DB\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DB\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\BlogPosts.cs" />
+    <Compile Include="DB\FakePost.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FNDesignerPage.aspx.cs">
+      <DependentUpon>FNDesignerPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\FNDesignerPage.aspx.designer.cs">
+      <DependentUpon>FNDesignerPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DesignerPage.aspx.cs">
+      <DependentUpon>DesignerPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\DesignerPage.aspx.designer.cs">
+      <DependentUpon>DesignerPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FakeNewsDashBoard.Master.cs">
+      <DependentUpon>FakeNewsDashBoard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FakeNewsDashBoard.Master.designer.cs">
+      <DependentUpon>FakeNewsDashBoard.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Layout.master.cs">
+      <DependentUpon>Layout.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layout.master.designer.cs">
+      <DependentUpon>Layout.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BlogPost.aspx.cs">
+      <DependentUpon>BlogPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\BlogPost.aspx.designer.cs">
+      <DependentUpon>BlogPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BlogTimeline.aspx.cs">
+      <DependentUpon>BlogTimeline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\BlogTimeline.aspx.designer.cs">
+      <DependentUpon>BlogTimeline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Contacts.aspx.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Contacts.aspx.designer.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FuzzyPage.aspx.cs">
+      <DependentUpon>FuzzyPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\FuzzyPage.aspx.designer.cs">
+      <DependentUpon>FuzzyPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InitativesPage.aspx.cs">
+      <DependentUpon>InitativesPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\InitativesPage.aspx.designer.cs">
+      <DependentUpon>InitativesPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MediaPage.aspx.cs">
+      <DependentUpon>MediaPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MediaPage.aspx.designer.cs">
+      <DependentUpon>MediaPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MYBookPage.aspx.cs">
+      <DependentUpon>MYBookPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MYBookPage.aspx.designer.cs">
+      <DependentUpon>MYBookPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FNViewPage.aspx.cs">
+      <DependentUpon>FNViewPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\FNViewPage.aspx.designer.cs">
+      <DependentUpon>FNViewPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\AddCommentForm.ascx.cs">
+      <DependentUpon>AddCommentForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\AddCommentForm.ascx.designer.cs">
+      <DependentUpon>AddCommentForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BlogNavigation.ascx.cs">
+      <DependentUpon>BlogNavigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\BlogNavigation.ascx.designer.cs">
+      <DependentUpon>BlogNavigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ViewPage.aspx.cs">
+      <DependentUpon>ViewPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ViewPage.aspx.designer.cs">
+      <DependentUpon>ViewPage.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\Dashboards\" />
+    <Folder Include="Content\Images\Media\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49919</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49929/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

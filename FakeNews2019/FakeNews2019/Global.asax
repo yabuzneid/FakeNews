@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="FakeNews2019.Global_asax" Language="C#" %>

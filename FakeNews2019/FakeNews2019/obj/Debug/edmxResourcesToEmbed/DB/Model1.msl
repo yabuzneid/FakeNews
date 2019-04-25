@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FakeNews2019ModelStoreContainer" CdmEntityContainer="FakeNews2019Entities">
+    <EntitySetMapping Name="FakePosts">
+      <EntityTypeMapping TypeName="FakeNews2019Model.FakePost">
+        <MappingFragment StoreEntitySet="FakePost">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
